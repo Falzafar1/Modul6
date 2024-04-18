@@ -1,0 +1,6 @@
+Eko,20,5
+Fina,91,5
+Gina,2,5
+Hadi,13,5
+Ika,21,5
+Jaya,15,5

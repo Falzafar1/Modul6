@@ -1,0 +1,5 @@
+Yuni,45,8
+Zara,44,8
+Ani,40,8
+Budi,12,8
+Cita,91,8

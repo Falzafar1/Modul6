@@ -1,0 +1,10 @@
+Adika,82,1
+Badi,67,1
+Citra,95,1
+Damar,48,1
+Elsa,73,1
+Fadil,89,1
+Gita,60,1
+Haris,78,1
+Ira,91,1
+Juna,55,1

@@ -1,0 +1,10 @@
+Abdul,85,2
+Bella,72,2
+Cindy,94,2
+Dito,63,2
+Eva,88,2
+Fajar,76,2
+Gina,55,2
+Hani,69,2
+Ira,79,2
+Joni,61,2

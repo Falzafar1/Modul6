@@ -1,0 +1,6 @@
+Uci,51,4
+Vina,16,4
+Wawan,27,4
+Xena,85,4
+Yudi,2,4
+Zara,0,4

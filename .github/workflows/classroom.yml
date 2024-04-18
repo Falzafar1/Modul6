@@ -1,0 +1,171 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: test1
+      id: test1
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test1
+        setup-command: make main
+        command: "./main"
+        input: '1'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Citra dengan 95 suara dari Cabang A1\n2. Suryadi dengan 92 suara dari
+          Cabang A1\n3. Ira dengan 91 suara dari Cabang A1"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test2
+      id: test2
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test2
+        setup-command: make main
+        command: "./main"
+        input: '2'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Cindy dengan 94 suara dari Cabang A2\n2. Suryadi dengan 92 suara dari
+          Cabang A2\n3. Eva dengan 88 suara dari Cabang A2"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test3
+      id: test3
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test3
+        setup-command: make main
+        command: "./main"
+        input: '3'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A3\n2. Hadiwijaya dengan 81 suara
+          dari Cabang A3\n3. Kusuma dengan 68 suara dari Cabang A3"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test4
+      id: test4
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test4
+        setup-command: make main
+        command: "./main"
+        input: '4'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A4\n2. Xena dengan 85 suara dari
+          Cabang A4\n3. Hadiwijaya dengan 81 suara dari Cabang A4"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test5
+      id: test5
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test5
+        setup-command: make main
+        command: "./main"
+        input: '5'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A5\n2. Fina dengan 91 suara dari
+          Cabang A5\n3. Hadiwijaya dengan 81 suara dari Cabang A5"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test6
+      id: test6
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test6
+        setup-command: make main
+        command: "./main"
+        input: '6'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A6\n2. Hadiwijaya dengan 81 suara
+          dari Cabang A6\n3. Kusuma dengan 68 suara dari Cabang A6"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test7
+      id: test7
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test7
+        setup-command: make main
+        command: "./main"
+        input: '7'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A7\n2. Hadiwijaya dengan 81 suara
+          dari Cabang A7\n3. Vivi dengan 78 suara dari Cabang A7"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test8
+      id: test8
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test8
+        setup-command: make main
+        command: "./main"
+        input: '8'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A8\n2. Cita dengan 91 suara dari
+          Cabang A8\n3. Hadiwijaya dengan 81 suara dari Cabang A8"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test9
+      id: test9
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test9
+        setup-command: make main
+        command: "./main"
+        input: '9'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A9\n2. Hadiwijaya dengan 81 suara
+          dari Cabang A9\n3. Kusuma dengan 68 suara dari Cabang A9"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: test10
+      id: test10
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test10
+        setup-command: make main
+        command: "./main"
+        input: '10'
+        expected-output: "Masukkan Cabang dari data: \nPegawai Yang Mendapat Promosi
+          :\n1. Suryadi dengan 92 suara dari Cabang A10\n2. Hadiwijaya dengan 81 suara
+          dari Cabang A10\n3. Kusuma dengan 68 suara dari Cabang A10"
+        comparison-method: contains
+        timeout: 2
+        max-score: 10
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        TEST1_RESULTS: "${{steps.test1.outputs.result}}"
+        TEST2_RESULTS: "${{steps.test2.outputs.result}}"
+        TEST3_RESULTS: "${{steps.test3.outputs.result}}"
+        TEST4_RESULTS: "${{steps.test4.outputs.result}}"
+        TEST5_RESULTS: "${{steps.test5.outputs.result}}"
+        TEST6_RESULTS: "${{steps.test6.outputs.result}}"
+        TEST7_RESULTS: "${{steps.test7.outputs.result}}"
+        TEST8_RESULTS: "${{steps.test8.outputs.result}}"
+        TEST9_RESULTS: "${{steps.test9.outputs.result}}"
+        TEST10_RESULTS: "${{steps.test10.outputs.result}}"
+      with:
+        runners: test1,test2,test3,test4,test5,test6,test7,test8,test9,test10

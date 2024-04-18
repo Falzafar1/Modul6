@@ -1,0 +1,5 @@
+Kartika,60,3
+Lani,61,3
+Mira,6,3
+Nando,43,3
+Oki,52,3

@@ -1,0 +1,4 @@
+Siti,78,7
+Tini,12,7
+Udin,42,7
+Vivi,78,7
